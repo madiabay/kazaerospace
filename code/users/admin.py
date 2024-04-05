@@ -13,6 +13,7 @@ fields = (
     'user_role',
 )
 
+
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('username', 'phone_number', 'email',)
     fieldsets = (

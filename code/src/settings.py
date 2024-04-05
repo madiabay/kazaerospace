@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd packages
-    'django_cleanup.apps.CleanupConfig',
+    'rest_framework',  # DRF
+    'django_cleanup.apps.CleanupConfig',  # for deleting media files
 
-    # local
+    # local models
     'users',
     'fitness_trainers',
     'schedules',
@@ -136,4 +137,15 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+"""
+our custom user
+"""
 AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

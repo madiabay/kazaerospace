@@ -12,7 +12,7 @@ class FitnessTrainer(models.Model):
         to=get_user_model(),
         on_delete=models.PROTECT,
         related_name='fitness_trainer',
-        limit_choices_to={'user_role': user_choices.UserRole.Trainer}
+        limit_choices_to={'user_role': user_choices.UserRole.Trainer}  # to make sure the Trainer
     )
 
 
