@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # local
     'users',
     'fitness_trainers',
+    'schedules',
 ]
 
 MIDDLEWARE = [

@@ -25,3 +25,4 @@ class Hall(models.Model):  # Зал
     )  # Maximum capacity of people
     description = models.TextField(blank=True, null=True)
     photo = models.ImageField(upload_to='hall_photos/', blank=True, null=True)
+    is_active = models.BooleanField(default=True)
