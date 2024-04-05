@@ -25,7 +25,7 @@ class CustomUser(AbstractUser):
     )
     user_role = models.CharField(
         choices=choices.UserRole.choices,
-        max_length=6,
+        max_length=7,
     )
 
     REQUIRED_FIELDS = ['email', 'phone_number', 'sex', 'user_role']
