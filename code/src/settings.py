@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 3rd packages
     'rest_framework',  # DRF
     'django_cleanup.apps.CleanupConfig',  # for deleting media files
+    'drf_yasg',  # SWAGGER
 
     # local models
     'users',

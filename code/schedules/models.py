@@ -1,6 +1,10 @@
 from django.db import models
 from . import choices
 
+"""
+Модель Расписание
+"""
+
 
 class Schedule(models.Model):
     trainer = models.ForeignKey(
