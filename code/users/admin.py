@@ -3,6 +3,7 @@ from . import models
 
 
 fields = (
+    'id',
     'familia',
     'imya',
     'otchestvo',
