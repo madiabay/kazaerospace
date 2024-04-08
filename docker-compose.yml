@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  kazaerospace:
+    container_name: kazaerospace
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python code/manage.py runserver 0.0.0.0:8000
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
